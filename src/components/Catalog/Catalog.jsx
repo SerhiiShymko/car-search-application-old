@@ -5,7 +5,7 @@ import { Container } from './Catalog.styled'
 import { api } from '../../services/api'
 import Sidebar from './Sidebar/Sidebar';
 
-// axios.defaults.baseURL = 'https://63ebe5f3be929df00ca4038a.mockapi.io/adverts';
+// axios.defaults.baseURL = 'https://648860930e2469c038fd986c.mockapi.io/api/v1/adverts';
 
 const Catalog = () => {
   const [adverts, setAdverts] = useState([])
@@ -15,6 +15,7 @@ const Catalog = () => {
     const fetchAdverts = async () => {
       try {
         const response = await api();
+        setAdverts(response);
       } catch (error) {
         console.error('Error feching adverts: ', error)
       }
