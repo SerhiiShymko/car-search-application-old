@@ -1,14 +1,14 @@
 import React from 'react';
+import { Button, Container, Heading, Paragraph } from './Home.styled'
 
 const Home = () => {
-    return (
-      <div>
-        <h1>Ласкаво просимо до нашої служби оренди автомобілів</h1>
-        <p>Надамо вам можливість орендувати автомобілі різних марок та комплектацій за доступними цінами.</p>
-        <button>Перейти до каталогу автомобілів</button>
-        {/* Зображення автомобілів */}
-      </div>
-    );
-  };
-  
-  export default Home;
+  return (
+    <Container>
+      <Heading>Ласкаво просимо до нашої служби оренди автомобілів</Heading>
+      <Paragraph>Надамо вам можливість орендувати автомобілі різних марок та комплектацій за доступними цінами.</Paragraph>
+      <Button>Перейти до каталогу автомобілів</Button>
+    </Container>
+  );
+};
+
+export default Home;

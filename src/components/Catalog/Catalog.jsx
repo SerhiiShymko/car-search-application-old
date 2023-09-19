@@ -1,13 +1,23 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import ButtonLoadMore from '../ButtonLoadMore/ButtonLoadMore'
 
 const Catalog = () => {
-  // Логіка фільтрації та список автомобілів
+  const [adverts, detAdverts] = useState([])
+  const [page, setPage] = useState(1)
+
+  useEffect(() => {
+    // Fetch adverts based on the page
+    // Update the adverts state
+  }, [page])
+
+  const handleLoadMore = () => {
+    setPage(page + 1)
+  }
 
   return (
     <div>
-      {/* Фільтри */}
-      {/* Список автомобілів */}
-      {/* Додаткова інформація про автомобіль (при кліку) */}
+      {/* Display adverts */}
+      <ButtonLoadMore onClick={handleLoadMore} />
     </div>
   );
 };
