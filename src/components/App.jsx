@@ -3,14 +3,14 @@ import { Route, Routes } from 'react-router-dom';
 
 import Home from './Home/Home';
 import Catalog from './Catalog/Catalog';
-import Advertisements from './Advertisements/Advertisements';
+import Favorites from './Favorites/Favorites';
 
 export function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="catalog" element={<Catalog />} />
-      <Route path="favorites" element={<Advertisements />} />
+      <Route path="/catalog" element={<Catalog />} />
+      <Route path="/favorites" element={<Favorites />} />
     </Routes>
   );
 }

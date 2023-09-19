@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import bg from '../../images/bg.jpg';
+import { NavLink as Link } from 'react-router-dom';
 
 export const Container = styled.div`
   width: 100%;
@@ -27,7 +28,7 @@ export const Paragraph = styled.p`
   margin-bottom: 30px;
 `;
 
-export const Button = styled.button`
+export const Button = styled(Link)`
   padding: 10px 20px;
   font-size: 18px;
   color: #fff;
