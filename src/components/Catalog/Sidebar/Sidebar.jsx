@@ -1,16 +1,24 @@
 import React, { useState } from "react";
 import { InputField, InputLabel, SearchButton, SidebarContainer } from "./Sidebar.styled";
 
-const Sidebar = ({ onSearch }) => {
-    const [brand, setBrand] = useState('')
-    const [price, setPrice] = useState('')
-    const [mileage, setMileage] = useState('')
+import CarBrandDropdown from '../utils/CarBrandDropdown';
+import RentalPriceDropdown from '../utils/RentalPriceDropdown';
+import MileageRangeInputs from '../utils/MileageRangeInputs';
+
+const Sidebar = ({ onSearch, onBrandChange, onPriceChange, onMileageChange }) => {
+    const [brand, setBrand] = useState('');
+    const [price, setPrice] = useState('');
+    const [minMileage, setMinMileage] = useState('');
+    const [maxMileage, setMaxMileage] = useState('');
 
     const handleSearch = () => {
         const searchParams = {
-            brand, price, mileage,
+            brand,
+            price,
+            minMileage,
+            maxMileage
         }
-        // Pass the search parameters to the parent component
+
         onSearch(searchParams);
     }
 
@@ -18,15 +26,20 @@ const Sidebar = ({ onSearch }) => {
         <SidebarContainer>
             <InputLabel>
                 Car brand:
-                <InputField type="text" value={brand} onChange={(e) => onBrandChange(e.target.value)} />
+                <InputField type="text" value={brand} onChange={(e) => setBrand(e.target.value)} />
             </InputLabel>
             <InputLabel>
                 Price / 1 hour:
-                <InputField type="text" value={price} onChange={(e) => onPriceChange(e.target.value)} />
+                <InputField type="text" value={price} onChange={(e) => setPrice(e.target.value)} />
             </InputLabel>
             <InputLabel>
                 Car mileage / km:
-                <InputField type="text" value={mileage} onChange={(e) => onMileageChange(e.target.value)} />
+                <MileageRangeInputs
+                    minMileage={minMileage}
+                    maxMileage={maxMileage}
+                    onMinMileageChange={(value) => setMinMileage(value)}
+                    onMaxMileageChange={(value) => setMaxMileage(value)}
+                />
             </InputLabel>
             <SearchButton onClick={handleSearch}>Search</SearchButton>
         </SidebarContainer>
