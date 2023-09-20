@@ -27,9 +27,11 @@ const CatalogPage = () => {
 
         try {
             const response = await fetchAdverts();
+
+
             const filteredAdverts = response.filter((advert) => {
-                const brandMatch = !brand || advert.brand.toLowerCase() === brand.toLowerCase();
-                const priceMatch = !price || advert.price <= parseFloat(price);
+                const brandMatch = !brand || advert.make.toLowerCase() === brand.toLowerCase();
+                const priceMatch = !price || parseFloat(advert.rentalPrice.replace('$', '')) <= parseFloat(price);
                 const minMileageMatch = !minMileage || advert.mileage >= parseInt(minMileage, 10);
                 const maxMileageMatch = !maxMileage || advert.mileage <= parseInt(maxMileage, 10);
 
@@ -67,7 +69,7 @@ const CatalogPage = () => {
     const handleSearch = (searchParams) => {
         setFilters(searchParams);
         setPage(1);
-        console.log('Search parameters:', searchParams);
+
     }
 
 

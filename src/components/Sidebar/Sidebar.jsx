@@ -3,7 +3,9 @@ import { InputField, InputLabel, SearchButton, SidebarContainer } from "./Sideba
 
 import CarBrandDropdown from '../../utils/CarBrandDropdown';
 import RentalPriceDropdown from '../../utils/RentalPriceDropdown';
-// import MileageRangeInputs from '../../utils/MileageRangeInputs';
+
+
+
 
 const Sidebar = ({ onSearch }) => {
     const [brand, setBrand] = useState('');

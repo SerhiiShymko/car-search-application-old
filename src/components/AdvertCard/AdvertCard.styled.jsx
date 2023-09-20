@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 
 export const Container = styled.div`
-        // width: 274px;
+position: relative;
     border: 1px solid #ccc;
     padding: 16px;
     margin - bottom: 16px;
@@ -28,6 +28,7 @@ export const Info = styled.div`
     margin - bottom: 4px;
 `
 
+
 export const MoreButton = styled.button`
     padding: 10px 20px;
   font-size: 16px;
@@ -41,3 +42,17 @@ export const MoreButton = styled.button`
     background-color: #0056b3;
   }
 `
+export const FavoriteButton = styled.button`
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: ${(props) => (props.isFavorite ? 'red' : 'white')};
+    border: none;
+    padding: 0;
+    font-size: 24px;
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+`;
