@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
 export const SidebarContainer = styled.div`
-display:flex;
-flex-direction:column;
+display:flex;	flex-direction:row;
 
   background-color: #f4f4f4;
   padding: 20px;
@@ -12,13 +11,13 @@ flex-direction:column;
 `;
 
 export const InputLabel = styled.label`
-  display: block;
-  margin-bottom: 10px;
+  display:flex;	flex-direction:row;
+    margin-bottom: 10px;
   font-weight: bold;
 `;
 
 export const InputField = styled.input`
-  width: 100%;
+  width: 100px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -37,4 +36,5 @@ export const SearchButton = styled.button`
   &:hover {
     background-color: #0056b3;
   }
+ 
 `;
