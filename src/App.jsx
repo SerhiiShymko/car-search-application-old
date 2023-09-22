@@ -1,10 +1,10 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 
-import HomePage from '../pages/HomePage/HomePage';
-import CatalogPage from '../pages/CatalogPage/CatalogPage';
-import { Layout } from './Layout/Layout';
-import FavoritesPage from '../pages/FavoritesPage/FavoritesPage';
+import HomePage from './pages/HomePage/HomePage';
+import CatalogPage from './pages/CatalogPage/CatalogPage';
+import { Layout } from './components/Layout/Layout';
+import FavoritesPage from './pages/FavoritesPage/FavoritesPage';
 
 export function App() {
   return (
