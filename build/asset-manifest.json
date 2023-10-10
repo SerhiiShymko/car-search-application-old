@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/car-search-application-old/static/css/main.4f5b65b9.css",
+    "main.js": "/car-search-application-old/static/js/main.a9e1b638.js",
+    "static/media/bg.jpg": "/car-search-application-old/static/media/bg.b997220748c92a3319b9.jpg",
+    "index.html": "/car-search-application-old/index.html",
+    "static/media/close.svg": "/car-search-application-old/static/media/close.9cf559ac6b5ec0a96d3130857d93c451.svg",
+    "main.4f5b65b9.css.map": "/car-search-application-old/static/css/main.4f5b65b9.css.map",
+    "main.a9e1b638.js.map": "/car-search-application-old/static/js/main.a9e1b638.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4f5b65b9.css",
+    "static/js/main.a9e1b638.js"
+  ]
+}
