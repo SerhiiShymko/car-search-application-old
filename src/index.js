@@ -7,7 +7,7 @@ import { BrowserRouter } from 'react-router-dom';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter basename="/car-search-application">
+    <BrowserRouter basename="/car-search-application-old">
       <App />
     </BrowserRouter>
   </React.StrictMode>
